@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
+import { Home } from "./_root/pages";
+import { Toaster } from "./components/ui/toaster";
 import SigninForm from "./auth/forms/SigninForm";
 import SignupForm from "./auth/forms/SignupForm";
-import { Home } from "./_root/pages";
-import "./globals.css";
 import AuthLayout from "./auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
+import "./globals.css";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
           <Route index element={<Home />} />
         </Route>
       </Routes>
+
+      <Toaster />
     </main>
   );
 };
